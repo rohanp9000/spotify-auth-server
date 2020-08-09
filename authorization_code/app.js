@@ -121,7 +121,7 @@ app.get('/callback', function(req, res) {
 
 
         // we can also pass the token to the browser to make requests from there
-        res.redirect('https://peaceful-temple-82398.herokuapp.com/');
+        res.redirect('https://sptfy-queue-client.herokuapp.com/');
       } else {
         res.redirect('/#' +
           querystring.stringify({
