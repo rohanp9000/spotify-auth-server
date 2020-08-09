@@ -15,7 +15,7 @@ var cookieParser = require('cookie-parser');
 
 var client_id = '888800fadea44cef8d7ae31a886e4907'; // Your client id
 var client_secret = '4f0616eb5de1468c84baa3d63d4ce1dd'; // Your secret
-var redirect_uri = 'https://sptfy-auth-server-rp.herokuapp.com/callback'; // Your redirect uri
+var redirect_uri = 'http://sptfy-auth-server-rp.herokuapp.com/callback'; // Your redirect uri
 
 /**
  * Generates a random string containing numbers and letters
@@ -121,7 +121,7 @@ app.get('/callback', function(req, res) {
 
 
         // we can also pass the token to the browser to make requests from there
-        //res.redirect('https://peaceful-temple-82398.herokuapp.com/');
+        res.redirect('https://peaceful-temple-82398.herokuapp.com/');
       } else {
         res.redirect('/#' +
           querystring.stringify({
