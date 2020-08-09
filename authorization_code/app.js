@@ -67,6 +67,7 @@ app.get('/callback', function(req, res) {
   var storedState = req.cookies ? req.cookies[stateKey] : null;
 
   if (state === null || state !== storedState) {
+    console.log(state);
     res.redirect('/#' +
       querystring.stringify({
         error: 'state_mismatch'
@@ -121,7 +122,7 @@ app.get('/callback', function(req, res) {
 
 
         // we can also pass the token to the browser to make requests from there
-        res.redirect('https://peaceful-temple-82398.herokuapp.com/');
+        //res.redirect('https://peaceful-temple-82398.herokuapp.com/');
       } else {
         res.redirect('/#' +
           querystring.stringify({
