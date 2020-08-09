@@ -109,7 +109,6 @@ app.get('/callback', function(req, res) {
         "refresh_token": refresh_token
     }
 
-      var tokenBuffer = Buffer.from(JSON.stringify(tokenAPIBody))
         var storeTokenOptions = {
           url: 'http://localhost:4200/api/tokens/5f30113c38dcd0274adc2765',
           json: tokenAPIBody
@@ -117,7 +116,7 @@ app.get('/callback', function(req, res) {
         console.log(storeTokenOptions)
         
         request.put(storeTokenOptions, function(error, response, body){
-          console.log(body)
+          console.log(response)
         });
 
 
