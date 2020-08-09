@@ -110,7 +110,7 @@ app.get('/callback', function(req, res) {
     }
 
         var storeTokenOptions = {
-          url: 'https://localhost:4200/api/tokens/5f30113c38dcd0274adc2765',
+          url: 'https://sptfy-queue-api.herokuapp.com/api/tokens/5f304d0f77cf3c0017ece550',
           json: tokenAPIBody
         }
         console.log(storeTokenOptions)
